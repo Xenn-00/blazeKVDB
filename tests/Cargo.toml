@@ -1,11 +1,11 @@
 [package]
-name = "resp_lite_tests"
+name = "blazekvdb_tests"
 version = "0.1.0"
 license = "MIT"
 authors = ["Faqih Firmansyah <github.com/Xenn-00>"]
 edition = "2024"
 
 [dependencies]
-resp_lite = { path = ".." }
+blazekvdb = { path = ".." }
 tokio = { version = "1.47.1", features = ["full"] }
 tempfile = "3.23.0"

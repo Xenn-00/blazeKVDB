@@ -118,6 +118,37 @@ dependencies = [
 ]
 
 [[package]]
+name = "blazekvdb"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "base64 0.22.1",
+ "bincode",
+ "bytes",
+ "config",
+ "flume",
+ "parking_lot",
+ "prometheus",
+ "serde",
+ "serde_json",
+ "thiserror 2.0.16",
+ "tokio",
+ "tracing",
+ "tracing-subscriber",
+ "warp",
+]
+
+[[package]]
+name = "blazekvdb_tests"
+version = "0.1.0"
+dependencies = [
+ "blazekvdb",
+ "tempfile",
+ "tokio",
+]
+
+[[package]]
 name = "block-buffer"
 version = "0.10.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -915,37 +946,6 @@ name = "regex-syntax"
 version = "0.8.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "caf4aa5b0f434c91fe5c7f1ecb6a5ece2130b02ad2a590589dda5146df959001"
-
-[[package]]
-name = "resp_lite"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "async-trait",
- "base64 0.22.1",
- "bincode",
- "bytes",
- "config",
- "flume",
- "parking_lot",
- "prometheus",
- "serde",
- "serde_json",
- "thiserror 2.0.16",
- "tokio",
- "tracing",
- "tracing-subscriber",
- "warp",
-]
-
-[[package]]
-name = "resp_lite_tests"
-version = "0.1.0"
-dependencies = [
- "resp_lite",
- "tempfile",
- "tokio",
-]
 
 [[package]]
 name = "ron"

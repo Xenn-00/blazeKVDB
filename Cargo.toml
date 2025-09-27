@@ -1,5 +1,5 @@
 [package]
-name = "resp_lite"
+name = "blazekvdb"
 version = "0.1.0"
 license = "MIT"
 authors = ["Faqih Firmansyah <github.com/Xenn-00>"]

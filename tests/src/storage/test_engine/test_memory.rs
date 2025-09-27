@@ -1,6 +1,6 @@
 use std::sync::atomic::Ordering;
 
-use resp_lite::storage::{StorageConfig, StorageEngine, engine::memory::MemoryEngine};
+use blazekvdb::storage::{StorageConfig, StorageEngine, engine::memory::MemoryEngine};
 
 #[tokio::test]
 async fn test_basic_operations() {

@@ -1,6 +1,6 @@
 use std::sync::Arc;
 
-use resp_lite::{http::metrics, metrics::RespLiteMetrics};
+use blazekvdb::{http::metrics, metrics::RespLiteMetrics};
 use tracing::Level;
 
 #[tokio::main]
