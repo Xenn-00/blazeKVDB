@@ -26,7 +26,7 @@ pub enum StorageError {
 pub type StorageResult<T> = Result<T, StorageError>;
 
 #[async_trait::async_trait]
-pub trait StorageEngine {
+pub trait StorageEngine: Send + Sync {
     // Get value by key
     async fn get(&self, key: &str) -> StorageResult<Option<Vec<u8>>>;
 
