@@ -5,12 +5,6 @@ use blazekvdb::{
     storage::{StorageConfig, StorageEngine, engine::memory::MemoryEngine},
 };
 
-#[test]
-fn test_scan_validation() {
-    let cmd = ScanCommand::new("".to_string());
-    assert!(cmd.validate().is_err());
-}
-
 #[tokio::test]
 async fn test_scan_execute() {
     let config = StorageConfig::default();

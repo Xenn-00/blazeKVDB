@@ -39,18 +39,6 @@ impl CommandHandler for ScanCommand {
     }
 
     fn validate(&self) -> Result<(), CommandError> {
-        if self.prefix.is_empty() {
-            return Err(CommandError::MissingParameter(
-                "Key prefix cannot be empty".to_string(),
-            ));
-        }
-
-        if self.prefix.len() > 512 {
-            return Err(CommandError::InvalidParameter(
-                "Key prefix too long (max 512 bytes)".to_string(),
-            ));
-        }
-
         Ok(())
     }
 

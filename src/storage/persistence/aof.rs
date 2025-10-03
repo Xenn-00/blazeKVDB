@@ -84,7 +84,7 @@ pub struct AppendOnlyFile {
     file_size: Arc<AtomicU64>,
 
     // config
-    fsync_every: u64, // fsync after N operations (0 = every operation)
+    pub fsync_every: u64, // fsync after N operations (0 = every operation)
 }
 
 impl AppendOnlyFile {

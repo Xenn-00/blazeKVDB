@@ -1,0 +1,35 @@
+[server]
+bind_addr = "127.0.0.1:6379"
+connection_timeout = 300
+max_connections = 1000
+keepalive_interval = 60
+worker_threads = 0
+
+[storage]
+max_memory = 104857600
+persistence_enabled = true
+aof_path = "resplite.aof"
+snapshot_interval = 3600
+shard_count = 16
+
+[persistence]
+enabled = true
+aof_path = "data/blazekvdb.aof"
+snapshot_enabled = true
+snapshot_interval = 3600
+snapshot_dir = "data/snapshots"
+
+[persistence.fsync_policy]
+everyn = 100
+
+[observability]
+metrics_enabled = true
+metrics_addr = "127.0.0.1:9090"
+health_check_enabled = true
+health_check_addr = "127.0.0.1:8080"
+log_level = "info"
+log_format = "compact"
+
+[security]
+tls_enabled = false
+require_auth = false

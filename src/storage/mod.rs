@@ -1,5 +1,6 @@
 use std::u64;
 
+use serde::{Deserialize, Serialize};
 use thiserror::Error;
 
 pub mod engine;
@@ -58,7 +59,7 @@ pub struct StorageStats {
     pub total_operations: u64,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct StorageConfig {
     pub max_memory: usize,         // Max memory usage in bytes
     pub persistence_enabled: bool, // Enable AOF logging

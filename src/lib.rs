@@ -1,4 +1,7 @@
+pub mod bootstrap;
 pub mod commands;
+pub mod config;
+pub mod error;
 pub mod http;
 pub mod metrics;
 pub mod protocol;
